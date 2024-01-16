@@ -14,6 +14,7 @@
                                 d="M8.543 2.232a.75.75 0 0 0-1.085 0l-5.25 5.5A.75.75 0 0 0 2.75 9H4v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V9h1.25a.75.75 0 0 0 .543-1.268l-5.25-5.5Z" />
                         </svg>
                         Dashboard</a></li>
+                <li class="menu-title">General</li>
                 <li><a href="{{ url('admin/booking') }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
                             fill="currentColor" class="w-4 h-4">
                             <path
@@ -24,22 +25,38 @@
                         </svg>
 
                         Booking</a></li>
-                <li class="menu-title">Menu Data</li>
-                <li><a href="{{ url('admin/tableData') }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                <li class="menu-title">Room</li>
+                <li><a href="{{ url('admin/room') }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
                             fill="currentColor" class="w-4 h-4">
                             <path fill-rule="evenodd"
-                                d="M4 2a1.5 1.5 0 0 0-1.5 1.5v9A1.5 1.5 0 0 0 4 14h8a1.5 1.5 0 0 0 1.5-1.5V6.621a1.5 1.5 0 0 0-.44-1.06L9.94 2.439A1.5 1.5 0 0 0 8.878 2H4Zm6 5.75a.75.75 0 0 1 1.5 0v3.5a.75.75 0 0 1-1.5 0v-3.5Zm-2.75 1.5a.75.75 0 0 1 1.5 0v2a.75.75 0 0 1-1.5 0v-2Zm-2 .75a.75.75 0 0 0-.75.75v.5a.75.75 0 0 0 1.5 0v-.5a.75.75 0 0 0-.75-.75Z"
+                                d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
                                 clip-rule="evenodd" />
                         </svg>
-                        Table Data</a></li>
-                <li><a href="{{ url('admin/detailData') }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+
+                        Room</a></li>
+                <li><a href="{{ url('admin/facility') }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                            fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                        Facility Room</a></li>
+                <li><a href="{{ url('admin/typeRoom') }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                            fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                        Type Room</a></li>
+                <li class="menu-title">Management</li>
+                <li><a href="{{ url('admin/management') }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
                             fill="currentColor" class="w-4 h-4">
                             <path
-                                d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.75 2.75 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.75 2.75 0 0 0 .892-.596l4.261-4.262a1.75 1.75 0 0 0 0-2.474Z" />
-                            <path
-                                d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5H4.75Z" />
+                                d="M8.5 4.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 13c.552 0 1.01-.452.9-.994a5.002 5.002 0 0 0-9.802 0c-.109.542.35.994.902.994h8ZM12.5 3.5a.75.75 0 0 1 .75.75v1h1a.75.75 0 0 1 0 1.5h-1v1a.75.75 0 0 1-1.5 0v-1h-1a.75.75 0 0 1 0-1.5h1v-1a.75.75 0 0 1 .75-.75Z" />
                         </svg>
-                        Detail Data</a></li>
+                        Admin Management</a></li>
             </ul>
         </div>
     </div>

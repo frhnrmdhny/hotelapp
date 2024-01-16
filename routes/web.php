@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\tipeKamarController;
+use App\Http\Controllers\kamarController;
+use App\Http\Controllers\StaffController;
+use App\Http\Controllers\FasilitasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,41 +38,39 @@ Route::get('/admin/editDataBooking', function () {
 });
 
 
-//Room
-Route::get('/admin/room', function () {
-    return view('admin/room/room');
+// ----------------------------- Kamar  -----------------------------//
+Route::controller(kamarController::class)->group(function () {
+    Route::get('form/kamar/index', 'index')->name('form/kamar/index');
+    Route::get('form/kamar/add', 'addKamar')->name('form/kamar/add');
+    Route::post('form/kamar/save', 'saveKamar')->name('form/kamar/save');
+    // Route::get('form/leaves/page', 'leavesPage')->name('form/leaves/page');
 });
-Route::get('/admin/addDataRoom', function () {
-    return view('admin/room/addRoom');
-});
-Route::get('/admin/editDataRoom', function () {
-    return view('admin/room/editRoom');
+
+// ----------------------------- Staff  -----------------------------//
+Route::controller(StaffController::class)->group(function () {
+    Route::get('form/staff/index', 'index')->name('form/staff/index');
+    Route::get('form/staff/add', 'add')->name('form/staff/add');
+    Route::post('form/staff/save', 'save')->name('form/staff/save');
+    Route::get('form/staff/edit/{staff_id}', 'edit')->name('form/staff/edit');
+    Route::post('form/staff/saveEdit', 'saveEdit')->name('form/staff/saveEdit');
 });
 
 
-//Type Room
-Route::get('/admin/typeRoom', function () {
-    return view('admin/typeRoom/typeRoom');
+// ----------------------------- Tipe Kamar -----------------------------//
+Route::controller(tipeKamarController::class)->group(function () {
+    Route::get('form/tpKamar/index', 'index')->name('form/tpKamar/index');
+    Route::get('form/tpKamar/add', 'add')->name('form/tpKamar/add');
+    Route::post('form/tpKamar/save', 'saveTipeKamar')->name('form/tpKamar/save');
+    Route::get('form/tpKamar/edit/{roomType_id}', 'edit')->name('form/tpKamar/edit');
+    Route::post('form/tpKamar/saveEdit', 'saveEdit')->name('form/tpKamar/saveEdit');
+    Route::post('form/tpKamar/delete', 'delete')->name('form/tpKamar/delete');
 });
-Route::get('/admin/addTypeRoom', function () {
-    return view('admin/typeRoom/addTypeRoom');
+// ----------------------------- Fasilitas Hotel  -----------------------------//
+Route::controller(FasilitasController::class)->group(function () {
+    Route::get('form/fasilitas/index', 'index')->name('form/fasilitas/index');
+    Route::get('form/fasilitas/add', 'add')->name('form/fasilitas/add');
+    Route::post('form/fasilitas/save', 'save')->name('form/fasilitas/save');
 });
-Route::get('/admin/editTypeRoom', function () {
-    return view('admin/typeRoom/editTypeRoom');
-});
-
-
-//Facility
-Route::get('/admin/facility', function () {
-    return view('admin/facilityRoom/facility');
-});
-Route::get('/admin/addDataFacility', function () {
-    return view('admin/facilityRoom/addFacility');
-});
-Route::get('/admin/editDataFacility', function () {
-    return view('admin/facilityRoom/editFacilityData');
-});
-
 
 //Management
 Route::get('/admin/management', function () {

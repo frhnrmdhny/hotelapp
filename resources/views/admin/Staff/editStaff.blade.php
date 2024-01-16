@@ -1,31 +1,24 @@
 @extends('layout/page')
 @section('content')
-    <title>Admin - Facility</title>
+    <title>Admin - Management</title>
     @include('components/navigation')
 
     <div class="hero min-h-screen bg-base-200">
         <div class="hero-content flex-col lg:flex-row-reverse">
             <div class="card shrink-0 w-full shadow-2xl bg-base-100">
-                <form class="card-body" action="{{ route('form/fasilitas/save') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="text-center" >
-                        <h1 class="text-5xl font-bold">Booking Data Mago Hotel</h1>
-                    </div>
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">No</span>
-                        </label>
-                        <input type="text" placeholder="Jhon Doe" class="input input-bordered" required />
+                <form class="card-body">
+                    <div class="text-center">
+                        <h1 class="text-5xl font-bold">Management Data Mago Hotel</h1>
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Name</span>
                         </label>
-                        <input name="nama" id="nama" type="text" placeholder="Jhon Doe" class="input input-bordered" required />
+                        <input type="text" placeholder="Jhon Doe" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text">Description</span>
+                            <span class="label-text">Title</span>
                         </label>
                         <input type="text" placeholder="Jhon Doe Fellas Acumalaka" class="input input-bordered"
                             required />

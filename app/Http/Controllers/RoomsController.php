@@ -20,7 +20,7 @@ class RoomsController extends Controller
     {
         $data = DB::table('room_types')->get();
         $user = DB::table('users')->get();
-        return view('room.addroom',compact('user','data'));
+        return view('room.addroom',compact('user','data')); 
     }
     // edit room
     public function editRoom($bkg_room_id)
@@ -121,7 +121,7 @@ class RoomsController extends Controller
     {
         try {
 
-            Room::destroy($request->id);
+            Room::destroy($request->id); 
             unlink('assets/upload/'.$request->fileupload);
             Toastr::success('Room deleted successfully :)','Success');
             return redirect()->back();

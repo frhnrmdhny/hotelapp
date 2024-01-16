@@ -117,5 +117,5 @@
                 $('#e_fileupload').val(_this.find('.fileupload').text());
             });
         </script>
-    @endsection
+    @endsection 
 @endsection

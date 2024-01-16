@@ -35,7 +35,14 @@
 
                                                 <td>{{ $data->nama}}</td>
                                                 <td>{{ $data->deskripsi}}</td>
-                                                <td>Hapus</td>
+                                                <td>
+                                                    <a class="dropdown-item" href="{{ url('form/fasilitas/edit/'.$data->facility_id) }}">
+                                                        <i class="fas fa-pencil-alt m-r-5"></i> Edit
+                                                    </a>
+                                                    <a class="dropdown-item delete_asset" href="#" data-toggle="modal" data-target="#delete_asset">
+                                                        <i class="fas fa-trash-alt m-r-5"></i> Delete
+                                                    </a> 
+                                                </td>
                                             </tr>
                                         @endforeach
                                   		

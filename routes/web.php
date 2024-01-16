@@ -15,7 +15,8 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\tipeKamarController;
 use App\Http\Controllers\hotelFacilitiesController;
 use App\Http\Controllers\kamarController;
-use App\Http\Controllers\FasilitasController;     
+use App\Http\Controllers\FasilitasController; 
+use App\Http\Controllers\StaffController;    
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -136,6 +137,9 @@ Route::controller(tipeKamarController::class)->group(function () {
     Route::get('form/tpKamar/index', 'index')->middleware('auth')->name('form/tpKamar/index');
     Route::get('form/tpKamar/add', 'add')->middleware('auth')->name('form/tpKamar/add');
     Route::post('form/tpKamar/save', 'saveTipeKamar')->middleware('auth')->name('form/tpKamar/save');
+    Route::get('form/tpKamar/edit/{roomType_id}', 'edit')->middleware('auth')->name('form/tpKamar/edit');
+    Route::post('form/tpKamar/saveEdit', 'saveEdit')->middleware('auth')->name('form/tpKamar/saveEdit');
+    Route::post('form/tpKamar/delete', 'delete')->middleware('auth')->name('form/tpKamar/delete');
 });
 // ----------------------------- Fasilitas Hotel  -----------------------------//
 Route::controller(FasilitasController::class)->group(function () {
@@ -150,4 +154,13 @@ Route::controller(kamarController::class)->group(function () {
     Route::get('form/kamar/add', 'addKamar')->middleware('auth')->name('form/kamar/add');
     Route::post('form/kamar/save', 'saveKamar')->middleware('auth')->name('form/kamar/save');
     // Route::get('form/leaves/page', 'leavesPage')->middleware('auth')->name('form/leaves/page');
+});
+
+// ----------------------------- Staff  -----------------------------//
+Route::controller(StaffController::class)->group(function () {
+    Route::get('form/staff/index', 'index')->middleware('auth')->name('form/staff/index');
+    Route::get('form/staff/add', 'add')->middleware('auth')->name('form/staff/add');
+    Route::post('form/staff/save', 'save')->middleware('auth')->name('form/staff/save');
+    Route::get('form/staff/edit/{staff_id}', 'edit')->middleware('auth')->name('form/staff/edit');
+    Route::post('form/staff/saveEdit', 'saveEdit')->middleware('auth')->name('form/staff/saveEdit');
 });

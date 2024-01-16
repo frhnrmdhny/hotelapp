@@ -9,7 +9,7 @@
                     <div class="col">
                         <div class="mt-5">
                             <h4 class="card-title float-left mt-2">All Rooms</h4>
-                            <a href="{{ route('form/addroom/page') }}" class="btn btn-primary float-right veiwbutton">Add Room</a> 
+                            <a href="{{ route('form/staff/add') }}" class="btn btn-primary float-right veiwbutton">Add Room</a> 
                         </div>
                     </div>
                 </div>
@@ -21,36 +21,33 @@
                             <div class="table-responsive">
                                 <table class="datatable table table-stripped table table-hover table-center mb-0">
                                     <thead>
-                                        <tr>
-                                            <th>Nomor Kamar</th>
-                                            <th>Tipe Kamar</th>
-                                            <th>Kapasitas</th>
-                                            <th>Harga</th>
-                                            <th class="">Actions</th>
+                                            <th>ID Staff</th>
+                                            <th>Nama Lengkap</th>
+                                            <th>Gaji </th>
+                                            <th>Nomor Telepon</th>
+                                            <th>email</th>
+                                            <th class="text-right">Actions</th>
                                         </tr>
                                     </thead>
+                                    @foreach($staff as $data)
                                   	<tbody>
-                                        @foreach($kamar as $data)
-                                        <tr> 
-                                            <td>{{$data->room_id}}</td>
-                                            @foreach($data->tipeKamar()->get() as $d)
-                                            <td>{{$d->nama}}</td>
-                                            <td>{{$d->kapasitas}}</td>
-                                            <td>{{$d->hargaPerMalam}}</td>
-                                            @endforeach
-                                            <td>
-
-                                                    <a class="dropdown-item" href="">
-                                                        <i class="fas fa-pencil-alt m-r-5"></i> Edit
-                                                    </a>
-                                                    <a class="dropdown-item delete_asset" href="#" data-toggle="modal" data-target="#delete_asset">
-                                                        <i class="fas fa-trash-alt m-r-5"></i> Delete
-                                                    </a> 
-                                                
-                                            </td>
-                                        </tr>
-                                        @endforeach
+                                  		
+                                        <td>{{$data->staff_id}}</td>
+                                        <td>{{$data->namaDepan}} {{$data->namaBelakang}}</td>
+                                        <td>{{$data->gaji}}</td>
+                                        <td>{{$data->no_phone}}</td>
+                                        <td>{{$data->email}}</td>
+                                        <td>
+                                            <a class="dropdown-item" href="{{ url('form/staff/edit/'.$data->staff_id) }}">
+                                                <i class="fas fa-pencil-alt m-r-5"></i> Edit
+                                            </a>
+                                            <a class="dropdown-item delete_asset" href="#" data-toggle="modal" data-target="#delete_asset">
+                                                <i class="fas fa-trash-alt m-r-5"></i> Delete
+                                            </a> 
+                                        </td>
+                                        
                                   	</tbody>
+                                    @endforeach
                                 </table>
                             </div>
                         </div>

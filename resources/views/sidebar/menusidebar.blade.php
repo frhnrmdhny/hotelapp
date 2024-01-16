@@ -34,33 +34,6 @@
                         <li><a href="attendance.html">Attendance </a></li>
                     </ul>
                 </li>
-                <li class="submenu"> <a href="#"><i class="far fa-money-bill-alt"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
-                    <ul class="submenu_class" style="display: none;">
-                        <li><a href="invoices.html">Invoices </a></li>
-                        <li><a href="payments.html">Payments </a></li>
-                        <li><a href="expenses.html">Expenses </a></li>
-                        <li><a href="taxes.html">Taxes </a></li>
-                        <li><a href="provident-fund.html">Provident Fund </a></li>
-                    </ul>
-                </li>
-                <li class="submenu"> <a href="#"><i class="fas fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
-                    <ul class="submenu_class" style="display: none;">
-                        <li><a href="salary.html">Employee Salary </a></li>
-                        <li><a href="salary-veiw.html">Payslip </a></li>
-                    </ul>
-                </li>
-                <li class="submenu">
-                    <a href="#">
-                        <i class="fa fa-user-plus"></i> 
-                        <span> User Management </span> 
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="submenu_class" style="display: none;">
-                        <li><a class="{{ set_active(['users/add/new']) }}" href="{{ route('users/add/new') }}">Add User</a></li>
-                        <li><a class="{{ set_active(['users/list/page']) }}" href="{{ route('users/list/page') }}">All User</a></li>
-                        <li><a href="">User Log Activity </a></li>
-                    </ul>
-                </li>
                 
                  <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Tipe Kamar </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
@@ -84,7 +57,13 @@
                     <ul class="submenu_class" style="display: none;">
                         <li><a class="{{ set_active(['form/kamar/index']) }}" href="{{ route('form/kamar/index') }}">Tabel Kamar </a></li>
                         <li><a class="{{ set_active(['form/kamar/add']) }}" href="{{ route('form/kamar/add') }}">Add Kamar</a></li>
-                        <li><a class="{{ request()->is('form/kamar/edit/*') ? 'active' : '' }}"> Edit Rooms </a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu"> <a href="#"><i class="fas fa-key"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
+                    <ul class="submenu_class" style="display: none;">
+                        <li><a class="{{ set_active(['form/staff/index']) }}" href="{{ route('form/staff/index') }}">Tabel staff </a></li>
+                        <li><a class="{{ set_active(['form/staff/add']) }}" href="{{ route('form/staff/add') }}">Add Staff</a></li>
                     </ul>
                 </li>
             </ul>

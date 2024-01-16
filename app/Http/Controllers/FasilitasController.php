@@ -27,4 +27,5 @@ class FasilitasController extends Controller
 
         return redirect()->route('form/fasilitas/index');
     }
+
 }

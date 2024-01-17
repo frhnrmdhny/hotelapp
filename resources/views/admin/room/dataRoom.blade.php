@@ -5,7 +5,7 @@
     @include('components/navigation')
 
     <div class="hero bg-base-200 ">
-        <div class="grid grid-cols-1 gap-4 py-4 md:grid-cols-3">
+        <div class="grid grid-cols-1 gap-4 py-4 md:grid-cols-4">
             @foreach ($kamar as $data)
                 @foreach ($data->tipeKamar()->get() as $d)
                     <div class="card w-96 bg-base-100 shadow-md rounded-lg">
@@ -37,8 +37,8 @@
                                                     <span class="label-text">Nomor Kamar</span>
 
                                                 </div>
-                                                <input type="text" placeholder="Type here" value="{{ $data->room_id }}"
-                                                    class="input input-bordered w-full max-w-xs" disabled />
+                                                <input type="text" placeholder="Type here" value="{{ $data->room_id }}" name="room_id" id="room_id"
+                                                    class="room_id input input-bordered w-full max-w-xs" disabled />
                                             </label>
                                         </div>
                                         <div class="hero">
@@ -47,7 +47,7 @@
                                                     <span class="label-text">Tipe Kamar</span>
 
                                                 </div>
-                                                <input type="text" placeholder="Type here" value="{{ $d->nama }}"
+                                                <input type="text" placeholder="Type here" value="{{ $d->nama }}"name="nama" id="nama"
                                                     class="input input-bordered w-full max-w-xs" disabled />
                                             </label>
                                         </div>
@@ -58,7 +58,7 @@
                                                     <span class="label-text">Kapasitas</span>
 
                                                 </div>
-                                                <input type="text" placeholder="Type here" value="{{ $d->kapasitas }}"
+                                                <input type="text" placeholder="Type here" value="{{ $d->kapasitas }}"name="kapasitas" id="kapasitas"
                                                     class="input input-bordered w-full max-w-xs" disabled />
                                             </label>
                                         </div>
@@ -70,7 +70,7 @@
 
                                                 </div>
                                                 <input type="text" placeholder="Type here"
-                                                    value="{{ $d->hargaPerMalam }}"
+                                                    value="{{ $d->hargaPerMalam }}" name="hargaPerMalam" id="hargaPerMalam"
                                                     class="input input-bordered w-full max-w-xs" disabled />
                                             </label>
                                         </div>

@@ -47,11 +47,11 @@ class kamarController extends Controller
 
     public function dataKamar()
     {   
-        $kamar = kamar::latest()->get();
-        $dataKamar = DB::table('tipe_kamars')->get();
+        $kamar = Kamar::latest()->get();
+        
         $fasilitas = DB::table('fasilitas')->get();
        
 
-        return view('admin.room.dataRoom', compact('dataKamar', 'fasilitas', 'kamar',));
+        return view('admin.room.dataRoom', compact('kamar', 'fasilitas'));
     }
 }

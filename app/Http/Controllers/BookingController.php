@@ -11,8 +11,10 @@ use Illuminate\Support\Facades\DB;
 
 class BookingController extends Controller
 {
-    public function index(){
-        return view('admin.booking.index');
+    public function index()
+    {
+        $booking = Booking::latest()->get();
+        return view('admin.booking.index', compact('booking'));
     }
 
     public function add()
@@ -21,7 +23,7 @@ class BookingController extends Controller
         // $room = Kamar::where('status', '=', 'tersedia')->get();
         $staff = Staff::latest()->get();
 
-        
+
 
         return view('admin.booking.addBooking', compact('kamar', 'staff'));
     }
@@ -43,7 +45,7 @@ class BookingController extends Controller
         $tipe_kamar = session('tipe_kamar');
 
         // ... ambil data kamar berdasarkan tipe_kamar ...
-        $kamar = Kamar::whereHas('tipeKamar', function ($query) use ($tipe_kamar){
+        $kamar = Kamar::whereHas('tipeKamar', function ($query) use ($tipe_kamar) {
             $query->where('nama', $tipe_kamar);
         })->where('status', 'tersedia')->get();
         return view('admin.booking.saveAddBooking', compact('booking_id', 'staff_id', 'kamar'));
@@ -63,5 +65,5 @@ class BookingController extends Controller
         $booking->save();
 
         return redirect()->route('form/booking/index');
-    }   
+    }
 }

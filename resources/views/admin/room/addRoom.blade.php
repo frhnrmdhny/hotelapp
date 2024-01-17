@@ -15,7 +15,7 @@
                         <label class="label">
                             <span class="label-text">No</span>
                         </label>
-                        <input name="room_id" type="text" placeholder="Jhon Doe" class="input input-bordered" required />
+                        <input name="room_id" type="text" placeholder="R 000" maxlength="8" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">

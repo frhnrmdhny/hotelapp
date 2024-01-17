@@ -5,6 +5,7 @@ use App\Http\Controllers\tipeKamarController;
 use App\Http\Controllers\kamarController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,6 +71,15 @@ Route::controller(FasilitasController::class)->group(function () {
     Route::get('form/fasilitas/index', 'index')->name('form/fasilitas/index');
     Route::get('form/fasilitas/add', 'add')->name('form/fasilitas/add');
     Route::post('form/fasilitas/save', 'save')->name('form/fasilitas/save');
+});
+
+// ----------------------------- Booking  -----------------------------//
+Route::controller(BookingController::class)->group(function () {
+    Route::get('form/booking/index', 'index')->name('form/booking/index');
+    Route::get('form/booking/add', 'add')->name('form/booking/add');
+    Route::post('form/booking/save', 'save')->name('form/booking/save');
+    Route::get('form/booking/nextAdd', 'nextAdd')->name('form/booking/nextAdd');
+    Route::post('form/booking/saveBooking', 'saveBooking')->name('form/booking/saveBooking');
 });
 
 //Management

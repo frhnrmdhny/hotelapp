@@ -35,8 +35,8 @@
                     </div>
                     @foreach($fasilitas as $pill)
                     <div>
-                        <div>
-                        <input type="text" class="input input-bordered" value="{{$pill->facility_id}}" name="facility_id[]" id="facility_id-{{$pill->facility_id}}" multiple /><br>
+                        <div class="form-control">
+                        <input type="checkbox" class="input input-bordered" value="{{$pill->facility_id}}" name="facility_id[]" id="facility_id-{{$pill->facility_id}}" multiple /><br>
                         <label for="facility_id-{{$pill->facility_id}}">{{$pill->nama}}</label>
                         </div>
                     </div>

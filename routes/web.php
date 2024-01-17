@@ -85,16 +85,6 @@ Route::controller(ResetPasswordController::class)->group(function () {
     Route::post('reset-password', 'updatePassword');
 });
 
-// ----------------------------- booking -----------------------------//
-Route::controller(BookingController::class)->group(function () {
-    Route::get('form/allbooking', 'allbooking')->name('form/allbooking')->middleware('auth');
-    Route::get('form/booking/edit/{bkg_id}', 'bookingEdit')->middleware('auth');
-    Route::get('form/booking/add', 'bookingAdd')->middleware('auth')->name('form/booking/add');
-    Route::post('form/booking/save', 'saveRecord')->middleware('auth')->name('form/booking/save');
-    Route::post('form/booking/update', 'updateRecord')->middleware('auth')->name('form/booking/update');
-    Route::post('form/booking/delete', 'deleteRecord')->middleware('auth')->name('form/booking/delete');
-});
-
 // ---------------------------- customers --------------------------//
 Route::controller(CustomerController::class)->group(function () {
     Route::get('form/allcustomers/page', 'allCustomers')->middleware('auth')->name('form/allcustomers/page');
@@ -163,4 +153,13 @@ Route::controller(StaffController::class)->group(function () {
     Route::post('form/staff/save', 'save')->middleware('auth')->name('form/staff/save');
     Route::get('form/staff/edit/{staff_id}', 'edit')->middleware('auth')->name('form/staff/edit');
     Route::post('form/staff/saveEdit', 'saveEdit')->middleware('auth')->name('form/staff/saveEdit');
+});
+
+// ----------------------------- Booking  -----------------------------//
+Route::controller(BookingController::class)->group(function () {
+    Route::get('form/booking/index', 'index')->middleware('auth')->name('form/booking/index');
+    Route::get('form/booking/add', 'add')->middleware('auth')->name('form/booking/add');
+    Route::post('form/booking/save', 'save')->middleware('auth')->name('form/booking/save');
+    Route::get('form/booking/nextAdd', 'nextAdd')->middleware('auth')->name('form/booking/nextAdd');
+    Route::post('form/booking/saveBooking', 'saveBooking')->middleware('auth')->name('form/booking/saveBooking');
 });

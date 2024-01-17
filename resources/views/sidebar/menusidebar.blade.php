@@ -4,13 +4,6 @@
             <ul>
             <li class="{{ set_active(['home']) }}"> <a href="{{ route('home') }}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
                 <li class="list-divider"></li>
-                <li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Booking </span> <span class="menu-arrow"></span></a>
-                    <ul class="submenu_class" style="display: none;">
-                        <li><a class="{{ set_active(['form/allbooking']) }}" href="{{ route('form/allbooking') }}"> All Booking </a></li>
-                        <li><a class="{{ request()->is('form/booking/edit/*') ? 'active' : '' }}"> Edit Booking </a></li>
-                        <li><a class="{{ set_active(['form/booking/add']) }}" href="{{ route('form/booking/add') }}"> Add Booking </a></li>
-                    </ul>
-                </li>
                 <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Customers </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
                         <li><a class="{{ set_active(['form/allcustomers/page']) }}" href="{{ route('form/allcustomers/page') }}"> All customers </a></li>
@@ -64,6 +57,14 @@
                     <ul class="submenu_class" style="display: none;">
                         <li><a class="{{ set_active(['form/staff/index']) }}" href="{{ route('form/staff/index') }}">Tabel staff </a></li>
                         <li><a class="{{ set_active(['form/staff/add']) }}" href="{{ route('form/staff/add') }}">Add Staff</a></li>
+                    </ul>
+                </li>
+
+                <li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Booking </span> <span class="menu-arrow"></span></a>
+                    <ul class="submenu_class" style="display: none;">
+                        <li><a class="{{ set_active(['form/booking/index'])}}" href="{{route('form/booking/index')}}">  Booking </a></li>
+                        <li><a class=""> Edit Booking </a></li>
+                        <li><a class="" href=""> Add Booking </a></li>
                     </ul>
                 </li>
             </ul>

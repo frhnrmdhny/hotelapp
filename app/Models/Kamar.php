@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\TipeKamar;
 use App\Models\Fasilitas;
+use App\Models\Booking;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -26,7 +27,12 @@ class Kamar extends Model
 
     public function tipeKamar()
     {
-        return $this->belongsTo(TipeKamar::class, 'roomType_id', 'roomType_id');
+        return $this->hasMany(TipeKamar::class, 'roomType_id', 'roomType_id');
+    }
+
+    public function booking()
+    {
+        return $this->belongsTo(Booking::class);
     }
 
     public function fasilitas()

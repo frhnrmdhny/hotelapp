@@ -19,6 +19,7 @@
                 <!-- head -->
                 <thead>
                     <tr>
+
                         <th>Nomor Fasilitas</th>
                         <th>Nama</th>
                         <th>Deskripsi</th>
@@ -49,6 +50,7 @@
                                 </svg>
                                 Edit</a>
                         </td>
+                        
                     </tr>
                     @endforeach
                 </tbody>

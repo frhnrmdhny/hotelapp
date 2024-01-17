@@ -15,7 +15,7 @@
                         <label class="label">
                             <span class="label-text">No</span>
                         </label>
-                        <input type="text" placeholder="Jhon Doe" class="input input-bordered" required />
+                        <input name="facility_id" id="facility_id" type="text" placeholder="Jhon Doe" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
@@ -27,7 +27,7 @@
                         <label class="label">
                             <span class="label-text">Description</span>
                         </label>
-                        <input type="text" placeholder="Jhon Doe Fellas Acumalaka" class="input input-bordered"
+                        <input name="deskripsi" id="deskripsi" type="text" placeholder="Jhon Doe Fellas Acumalaka" class="input input-bordered"
                             required />
                     </div>
                     <div class="form-control mt-6">

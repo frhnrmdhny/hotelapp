@@ -13,21 +13,21 @@
                     </div>
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text">No</span>
+                            <span class="label-text">Facility Code</span>
                         </label>
-                        <input type="text" placeholder="Jhon Doe" class="input input-bordered" required />
+                        <input type="text" placeholder="FC000" class="input input-bordered" name="facility_id" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text">Name</span>
+                            <span class="label-text">Nama Barang Fasilitas</span>
                         </label>
-                        <input name="nama" id="nama" type="text" placeholder="Jhon Doe" class="input input-bordered" required />
+                        <input name="nama" id="nama" type="text" placeholder="Barang" name="nama" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text">Description</span>
+                            <span class="label-text">Deksripsi</span>
                         </label>
-                        <input type="text" placeholder="Jhon Doe Fellas Acumalaka" class="input input-bordered"
+                        <input type="text" placeholder="Lorem Ipsum Dolor" name="deskripsi" class="input input-bordered"
                             required />
                     </div>
                     <div class="form-control mt-6">

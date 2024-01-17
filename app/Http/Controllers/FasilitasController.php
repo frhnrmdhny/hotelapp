@@ -28,4 +28,8 @@ class FasilitasController extends Controller
         return redirect()->route('form/fasilitas/index');
     }
 
+    // public function delete(Request $request){
+        
+    // }
+
 }

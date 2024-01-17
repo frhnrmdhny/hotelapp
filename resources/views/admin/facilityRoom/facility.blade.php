@@ -20,8 +20,8 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Name</th>
-                        <th>Description</th>
+                        <th>Nama Barang Fasilitas</th>
+                        <th>Deskripsi</th>
                         <th>Tool</th>
                     </tr>
                 </thead>
@@ -29,6 +29,7 @@
                 @foreach ($fasilitas as $data)
                     <tr>
                         <td>1</td>
+                     
                         <td>{{ $data->nama}}</td>
                         <td>{{ $data->deskripsi}}</td>
 
@@ -49,6 +50,7 @@
                                 </svg>
                                 Edit</a>
                         </td>
+                        
                     </tr>
                     @endforeach
                 </tbody>

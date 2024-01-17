@@ -1,4 +1,4 @@
-<div class="navbar bg-base-100">
+<div class="navbar bg-base-100~">
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
@@ -15,8 +15,8 @@
                         </svg>
                         Dashboard</a></li>
                 <li class="menu-title">General</li>
-                <li><a href="{{ route('form/booking/index') }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            fill="currentColor" class="w-4 h-4">
+                <li><a href="{{ route('form/booking/index') }}"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
                             <path
                                 d="M3.6 1.7A.75.75 0 1 0 2.4.799a6.978 6.978 0 0 0-1.123 2.247.75.75 0 1 0 1.44.418c.187-.644.489-1.24.883-1.764ZM13.6.799a.75.75 0 1 0-1.2.9 5.48 5.48 0 0 1 .883 1.765.75.75 0 1 0 1.44-.418A6.978 6.978 0 0 0 13.6.799Z" />
                             <path fill-rule="evenodd"
@@ -26,24 +26,33 @@
 
                         Booking</a></li>
                 <li class="menu-title">Room</li>
-                <li><a href="{{ route('form/kamar/index') }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            fill="currentColor" class="w-4 h-4">
+                <li><a href="{{ route('form/kamar/index') }}"> <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
                             <path fill-rule="evenodd"
                                 d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
                                 clip-rule="evenodd" />
                         </svg>
 
                         Room</a></li>
-                <li><a href="{{ route('form/fasilitas/index') }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            fill="currentColor" class="w-4 h-4">
+                <li><a href="{{ route('form/kamar/data') }}"> <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M15 11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6ZM7.25 7.5a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0-.5.5V8a.5.5 0 0 0 .5.5h3.75a.5.5 0 0 0 .5-.5v-.5Zm1.5 3a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-.5.5H9.25a.5.5 0 0 1-.5-.5v-.5ZM13.5 8v-.5A.5.5 0 0 0 13 7H9.25a.5.5 0 0 0-.5.5V8a.5.5 0 0 0 .5.5H13a.5.5 0 0 0 .5-.5Zm-6.75 3.5a.5.5 0 0 0 .5-.5v-.5a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0-.5.5v.5a.5.5 0 0 0 .5.5h3.75Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+
+                        Data Room</a></li>
+                <li><a href="{{ route('form/fasilitas/index') }}"> <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
                             <path fill-rule="evenodd"
                                 d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
                                 clip-rule="evenodd" />
                         </svg>
 
                         Facility Room</a></li>
-                <li><a href="{{ route('form/tpKamar/index') }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            fill="currentColor" class="w-4 h-4">
+                <li><a href="{{ route('form/tpKamar/index') }}"> <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
                             <path fill-rule="evenodd"
                                 d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
                                 clip-rule="evenodd" />
@@ -57,8 +66,8 @@
                                 d="M8.5 4.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 13c.552 0 1.01-.452.9-.994a5.002 5.002 0 0 0-9.802 0c-.109.542.35.994.902.994h8ZM12.5 3.5a.75.75 0 0 1 .75.75v1h1a.75.75 0 0 1 0 1.5h-1v1a.75.75 0 0 1-1.5 0v-1h-1a.75.75 0 0 1 0-1.5h1v-1a.75.75 0 0 1 .75-.75Z" />
                         </svg>
                         Admin Management</a></li>
-                <li><a href="{{ route('form/staff/index') }}"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            fill="currentColor" class="w-4 h-4">
+                <li><a href="{{ route('form/staff/index') }}"> <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
                             <path
                                 d="M8.5 4.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 13c.552 0 1.01-.452.9-.994a5.002 5.002 0 0 0-9.802 0c-.109.542.35.994.902.994h8ZM12.5 3.5a.75.75 0 0 1 .75.75v1h1a.75.75 0 0 1 0 1.5h-1v1a.75.75 0 0 1-1.5 0v-1h-1a.75.75 0 0 1 0-1.5h1v-1a.75.75 0 0 1 .75-.75Z" />
                         </svg>

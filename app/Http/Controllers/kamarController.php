@@ -44,4 +44,8 @@ class kamarController extends Controller
     }
 
     // public function edit()
+
+    public function dataKamar(){
+        return view('admin.room.dataRoom');
+    }
 }

@@ -46,6 +46,7 @@ Route::controller(kamarController::class)->group(function () {
     Route::post('form/kamar/save', 'saveKamar')->name('form/kamar/save');
     Route::post('form/kamar/delete', 'delete')->name('form/kamar/delete');
     // Route::get('form/leaves/page', 'leavesPage')->name('form/leaves/page');
+    Route::get('form/kamar/data', 'dataKamar')->name('form/kamar/data');
 });
 
 // ----------------------------- Staff  -----------------------------//

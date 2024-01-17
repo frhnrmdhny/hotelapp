@@ -1,6 +1,5 @@
 @extends('layout.page')
 @section('content')
-
     <title>Admin - Type</title>
 
     @include('components/navigation')
@@ -19,6 +18,7 @@
             <table class="table text-xl text-center" compact>
                 <!-- head -->
                 <thead>
+
                          <tr>
                             <th>Nomor Booking</th>
                             <th>Nomor Kamar</th>
@@ -51,6 +51,7 @@
                                     </svg>
                                     Delete</label>
                                 <a href="{{ url('form/staff/edit/'.$data->staff_id) }}" class="btn btn-success"> <svg
+
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                         class="w-4 h-4">
                                         <path fill-rule="evenodd"
@@ -60,6 +61,7 @@
                                     Edit</a>
                             </td>
                         </tr>
+
                         @endforeach
                 </tbody>
             </table>
@@ -95,8 +97,6 @@
                 </script>
             @endsection
 
-
         </div>
     </div>
 @endsection
-

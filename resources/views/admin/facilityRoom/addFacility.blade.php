@@ -16,6 +16,7 @@
                             <span class="label-text">Facility Code</span>
                         </label>
                         <input type="text" placeholder="FC000" class="input input-bordered" name="facility_id" required />
+
                     </div>
                     <div class="form-control">
                         <label class="label">
@@ -29,6 +30,7 @@
                         </label>
 
                         <input type="text" name="deskripsi" placeholder="Jhon Doe Fellas Acumalaka" class="input input-bordered"
+
                             required />
                     </div>
                     <div class="form-control mt-6">

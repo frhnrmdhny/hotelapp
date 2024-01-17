@@ -15,7 +15,7 @@
                         <label class="label">
                             <span class="label-text">No</span>
                         </label>
-                        <input name="room_id" type="text" placeholder="Jhon Doe" class="input input-bordered" required />
+                        <input name="room_id" type="text" placeholder="R 000" maxlength="8" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
@@ -32,19 +32,18 @@
                             <span class="label-text">Facility</span>
                         </label>
                     </div>
-
                     @foreach ($fasilitas as $pill)
-                    <div class="px-12">
-                        <div class="form-control">
-                            <label class="label cursor-pointer">
-                                <input type="checkbox" checked="checked" class="checkbox checkbox-success" value="{{ $pill->facility_id }}"
-                                name="facility_id[]" id="facility_id-{{ $pill->facility_id }}" multiple />
-                                <span class="label-text"
-                                for="facility_id-{{ $pill->facility_id }}">{{ $pill->nama }}</span>
-                            </label>
-
+                        <div class="px-12">
+                            <div class="form-control">
+                                <label class="label cursor-pointer">
+                                    <input type="checkbox" checked="checked" class="checkbox checkbox-success"
+                                        value="{{ $pill->facility_id }}" name="facility_id[]"
+                                        id="facility_id-{{ $pill->facility_id }}" multiple />
+                                    <span class="label-text"
+                                        for="facility_id-{{ $pill->facility_id }}">{{ $pill->nama }}</span>
+                                </label>
+                            </div>
                         </div>
-                    </div>
                     @endforeach
                     <div class="form-control mt-6">
                         <button class="btn btn-outline btn-primary">Add</button>

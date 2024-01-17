@@ -13,9 +13,9 @@
                     </div>
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text">No</span>
+                            <span class="label-text">Nomor Tipe Kamar</span>
                         </label>
-                        <input name="roomType_id" type="text" placeholder="Jhon Doe" class="input input-bordered" required />
+                        <input name="roomType_id" type="text" placeholder="RMT-1001" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">

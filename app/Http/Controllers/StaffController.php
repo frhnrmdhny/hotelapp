@@ -50,9 +50,15 @@ class StaffController extends Controller
             'gaji' => $request->gaji,
             'ttl' => $request->ttl,
             'no_phone' => $request->no_phone,
-            'no_phone' => $request->staff_id,
+            'email' => $request->email,
         ];
         Staff::where('staff_id', $request->staff_id)->update($update);
         return redirect()->route('form/staff/index');
+    }
+
+    public function delete(Request $request)
+    {
+        DB::table('staff')->where('staff_id', '=', $request->staff_id)->delete();
+        return redirect()->back();
     }
 }

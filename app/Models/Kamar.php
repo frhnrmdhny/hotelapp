@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\TipeKamar;
+use App\Models\Fasilitas;
 
 class Kamar extends Model
 {
@@ -22,6 +24,11 @@ class Kamar extends Model
     public function fasilitas()
     {
         return $this->belongsToMany(Fasilitas::class, 'fasilitas_kamar','room_id', 'facility_id' );
+    }
+
+     public function setRoomStatusUsed()
+    {
+        $this->update(['status' => 'terpakai']);
     }
 }
 

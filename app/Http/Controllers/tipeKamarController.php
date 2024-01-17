@@ -18,7 +18,7 @@ class tipeKamarController extends Controller
         return view('admin.typeRoom.addTypeRoom');
     }
 
-    public function saveTipeKamar(Request $request)
+    public function saveTipeKamar(Request $request) 
     {
         $kamar = new TipeKamar();
 

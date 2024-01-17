@@ -16,13 +16,13 @@
                         <label class="label" for="booking_id">
                             <span class="label-text">No Booking</span>
                         </label>
-                        <input name="booking_id"  id="booking_id" class="form-control" type="text" value="" required> 
+                        <input name="booking_id"  id="booking_id" class="input input-bordered" type="text" value="" required> 
                     </div>
                     <div class="form-control">
                         <label class="label" for="staff_id">
-                            <span class="label-text">Pilih Staff</span>
+                            <span class="label-text">Pilih Staff</span> 
                         </label>
-                            <select class="form-control" id="staff_id" name="staff_id">
+                            <select class="input input-bordered" id="staff_id" name="staff_id">
                                 @foreach($staff as $data)
                                 <option value="{{$data->staff_id}}">{{$data->namaDepan}} {{$data->namaBelakang}}</option>
                                 @endforeach
@@ -32,13 +32,13 @@
                         <label class="label" for="kapasitas">
                             <span class="label-text">Jumlah Tamu</span>
                         </label>
-                        <input name="kapasitas"  id="kapasitas" class="form-control" type="text" value="" oninput="filterTipeKamar()" required> 
+                        <input name="kapasitas"  id="kapasitas" class="input input-bordered" type="text" value="" oninput="filterTipeKamar()" required> 
                     </div>
                     <div class="form-control">
                         <label class="label" for="tipeKamar">
                             <span class="label-text">Tipe Kamar</span>
                         </label>
-                            <select class="form-control" id="tipeKamar" name="tipeKamar">
+                            <select class="input input-bordered" id="tipeKamar" name="tipeKamar">
                                 @foreach($kamar as $data)
                                     <option value="{{$data->nama}}">{{$data->nama}} </option>
                                 @endforeach

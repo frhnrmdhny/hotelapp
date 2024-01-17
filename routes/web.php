@@ -5,6 +5,7 @@ use App\Http\Controllers\tipeKamarController;
 use App\Http\Controllers\kamarController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,7 @@ Route::controller(kamarController::class)->group(function () {
     Route::get('form/kamar/index', 'index')->name('form/kamar/index');
     Route::get('form/kamar/add', 'addKamar')->name('form/kamar/add');
     Route::post('form/kamar/save', 'saveKamar')->name('form/kamar/save');
+    Route::post('form/kamar/delete', 'delete')->name('form/kamar/delete');
     // Route::get('form/leaves/page', 'leavesPage')->name('form/leaves/page');
 });
 
@@ -53,6 +55,7 @@ Route::controller(StaffController::class)->group(function () {
     Route::post('form/staff/save', 'save')->name('form/staff/save');
     Route::get('form/staff/edit/{staff_id}', 'edit')->name('form/staff/edit');
     Route::post('form/staff/saveEdit', 'saveEdit')->name('form/staff/saveEdit');
+    Route::post('form/staff/delete', 'delete')->name('form/staff/delete');
 });
 
 
@@ -70,6 +73,19 @@ Route::controller(FasilitasController::class)->group(function () {
     Route::get('form/fasilitas/index', 'index')->name('form/fasilitas/index');
     Route::get('form/fasilitas/add', 'add')->name('form/fasilitas/add');
     Route::post('form/fasilitas/save', 'save')->name('form/fasilitas/save');
+    Route::get('form/fasilitas/edit/{nama}', 'edit')->name('form/fasilitas/edit');
+    Route::post('form/fasilitas/saveEdit', 'saveEdit')->name('form/fasilitas/saveEdit');
+    Route::post('form/fasilitas/delete', 'delete')->name('form/fasilitas/delete');
+});
+
+// ----------------------------- Booking  -----------------------------//
+Route::controller(BookingController::class)->group(function () {
+    Route::get('form/booking/index', 'index')->name('form/booking/index');
+    Route::get('form/booking/add', 'add')->name('form/booking/add');
+    Route::post('form/booking/save', 'save')->name('form/booking/save');
+    Route::get('form/booking/nextAdd', 'nextAdd')->name('form/booking/nextAdd');
+    Route::post('form/booking/saveBooking', 'saveBooking')->name('form/booking/saveBooking');
+    Route::post('form/booking/delete', 'delete')->name('form/booking/delete');
 });
 
 //Management

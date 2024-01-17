@@ -15,7 +15,7 @@
                         </svg>
                         Dashboard</a></li>
                 <li class="menu-title">General</li>
-                <li><a href="{{ url('admin/booking') }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                <li><a href="{{ route('form/booking/index') }}"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
                             fill="currentColor" class="w-4 h-4">
                             <path
                                 d="M3.6 1.7A.75.75 0 1 0 2.4.799a6.978 6.978 0 0 0-1.123 2.247.75.75 0 1 0 1.44.418c.187-.644.489-1.24.883-1.764ZM13.6.799a.75.75 0 1 0-1.2.9 5.48 5.48 0 0 1 .883 1.765.75.75 0 1 0 1.44-.418A6.978 6.978 0 0 0 13.6.799Z" />

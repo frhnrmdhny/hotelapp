@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="sunset">
+<html lang="en" data-theme="retro">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,10 @@
 
 <body>
     @yield('content')
+
+    <script src="{{ URL::to('assets/js/jquery-3.5.1.min.js') }}"></script>
+	
+    @yield('script')
 </body>
 
 </html>

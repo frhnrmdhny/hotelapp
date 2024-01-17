@@ -32,6 +32,7 @@
                             <span class="label-text">Facility</span>
                         </label>
                     </div>
+
                     @foreach ($fasilitas as $pill)
                     <div class="px-12">
                         <div class="form-control">
@@ -41,6 +42,7 @@
                                 <span class="label-text"
                                 for="facility_id-{{ $pill->facility_id }}">{{ $pill->nama }}</span>
                             </label>
+
                         </div>
                     </div>
                     @endforeach

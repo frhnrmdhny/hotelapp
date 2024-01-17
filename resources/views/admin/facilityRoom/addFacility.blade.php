@@ -27,7 +27,8 @@
                         <label class="label">
                             <span class="label-text">Deksripsi</span>
                         </label>
-                        <input type="text" placeholder="Lorem Ipsum Dolor" name="deskripsi" class="input input-bordered"
+
+                        <input type="text" name="deskripsi" placeholder="Jhon Doe Fellas Acumalaka" class="input input-bordered"
                             required />
                     </div>
                     <div class="form-control mt-6">

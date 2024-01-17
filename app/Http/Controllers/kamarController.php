@@ -43,5 +43,9 @@ class kamarController extends Controller
          return redirect()->route('form/kamar/index');
     }
 
-    // public function edit()
+    public function delete(Request $request)
+    {
+        DB::table('kamars')->where('room_id', '=', $request->room_id)->delete();
+        return redirect()->back();
+    }
 }

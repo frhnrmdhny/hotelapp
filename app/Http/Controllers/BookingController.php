@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\DB;
 class BookingController extends Controller
 {
     public function index(){
-        return view('admin.booking.index');
+        $booking = Booking::latest()->get();
+        return view('admin.booking.index', compact('booking'));
     }
 
     public function add()
@@ -64,4 +65,10 @@ class BookingController extends Controller
 
         return redirect()->route('form/booking/index');
     }   
+
+    public function delete(Request $request)
+    {
+        DB::table('bookings')->where('booking_id', '=', $request->booking_id)->delete();
+        return redirect()->back();
+    }
 }

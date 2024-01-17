@@ -11,8 +11,8 @@ class Staff extends Model
 
     protected $fillable = ['staff_id', 'namaDepan','namaBelakang', 'gaji', 'ttl', 'no_phone', 'email'];
 
-    // public function booking()
-    // {
-    //     return $this->belongsTo(Booking::class);
-    // }
+    public function booking()
+    {
+        return $this->belongsTo(Booking::class);
+    }
 }

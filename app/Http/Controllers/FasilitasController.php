@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Fasilitas;
-use DB;
+use Illuminate\Support\Facades\DB;
 class FasilitasController extends Controller
 {
     public function index(){
-        $fasilitas = Fasilitas::latest()->get();
+        $fasilitas = DB::table('fasilitas')->get();
         return view('admin.facilityRoom.facility', compact('fasilitas'));
     }
 
@@ -26,6 +26,31 @@ class FasilitasController extends Controller
         $fasilitas->save();
 
         return redirect()->route('form/fasilitas/index');
+    }
+
+    public function edit($nama)
+    {
+        $fasilitas = DB::table('fasilitas')->where('nama', $nama)->first();
+        return view('admin.facilityRoom.editFacilityData', compact('fasilitas'));
+    }
+
+    public function saveEdit(Request $request)
+    {
+        $update = [
+            'facility_id' => $request->facility_id,
+            'nama'  => $request->nama,
+            'deskripsi' => $request->deskripsi,
+        ];
+
+        Fasilitas::where('nama', $request->nama)->update($update);
+        return redirect()->route('form/fasilitas/index');
+    }
+
+    public function delete(Request $request)
+    {
+        DB::table('fasilitas')->where('facility_id', '=', $request->facility_id)->delete();
+
+        return redirect()->back();
     }
 
 }

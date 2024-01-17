@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreign('room_id')->references('room_id')->on('kamars')->onDelete('cascade');
             $table->char('staff_id', 8)->notNull();
             $table->foreign('staff_id')->references('staff_id')->on('staff')->onDelete('cascade');
-            
             $table->dateTime('checkin')->notNull();
             $table->dateTime('checkout')->notNull();
             $table->char('nama_tamu', 30)->notNull();

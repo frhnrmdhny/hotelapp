@@ -27,7 +27,7 @@
                         <label class="label" for="room_id">
                             <span class="label-text">Pilih Kamar</span>
                         </label>
-                         <select class="form-control" id="room_id" name="room_id">
+                         <select class="input input-bordered" id="room_id" name="room_id">
                             @foreach($kamar as $data)
                             <option value="{{$data->room_id}}">{{$data->room_id}} </option>
                             @endforeach
@@ -37,38 +37,39 @@
                         <label class="label" for="checkin">
                             <span class="label-text">Tanggal Checkin</span>
                         </label>
-                        <input type="datetime-local" name="checkin" id="checkin" value="{{ date('Y-m-d') . 'T' . date('H:i:s') }}" readonly>
+                        <input class="input input-bordered" type="datetime-local" name="checkin" id="checkin" value="{{ date('Y-m-d') . 'T' . date('H:i:s') }}" readonly>
                     </div>
                     <div class="form-control">
                         <label class="label" for="lama">
                             <span class="label-text">Lama Menginap</span>
                         </label>
-                        <input name="lama" id="lama" class="form-control" type="text" value="">  
+                        <input name="lama" id="lama" class="input input-bordered" type="text" value="">  
                     </div>
                     <div class="form-control">
                         <label class="label" for="checkout">
                             <span class="label-text">Tanggal Checkout</span>
                         </label>
-                        <input type="datetime-local" name="checkout" id="checkout" value="" readonly>
+                        <input class="input input-bordered" type="datetime-local" name="checkout" id="checkout" value="" readonly>
+                        <!-- <input type="datetime-local" name="checkout" class="input input-bordered"> -->
                     </div>
 
                     <div class="form-control">
                         <label class="label" for="nama_tamu">
                             <span class="label-text">Nama Tamu</span>
                         </label>
-                        <input name="nama_tamu"  id="nama_tamu" class="form-control" type="text" value=""> 
+                        <input name="nama_tamu"  id="nama_tamu" class="input input-bordered" type="text" value=""> 
                     </div>
                     <div class="form-control">
                         <label class="label" for="NIK">
                             <span class="label-text">Nomor Identitas</span>
                         </label>
-                        <input name="NIK"  id="NIK" class="form-control" type="text" value=""> 
+                        <input name="NIK"  id="NIK" class="input input-bordered" type="text" value=""> 
                     </div>
                     <div class="form-control">
                         <label class="label" for="no_phone">
                             <span class="label-text">Nomor Telepon</span>
                         </label>
-                        <input name="no_phone"  id="no_phone" class="form-control" type="text" value="">
+                        <input name="no_phone"  id="no_phone" class="input input-bordered" type="text" value="">
                     </div>
     
                     <div class="form-control mt-6">
